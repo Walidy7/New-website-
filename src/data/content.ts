@@ -253,35 +253,35 @@ export const DEMO_INDUSTRIES: DemoIndustry[] = [
   {
     id: 'restaurant',
     name: 'Restaurant & Café',
-    businessName: 'The Urban Bistro',
-    category: 'Food & Dining',
-    heroHeadline: 'Artisan Wood-Fired Kitchen & Espresso Bar',
-    heroSubheadline: 'Handmade pasta, seasonal Mediterranean small plates, and roasted craft coffees.',
-    accentColor: '#3b82f6',
+    businessName: 'The Urban Bistro & Bar',
+    category: 'Wood-Fired Kitchen • Mediterranean',
+    heroHeadline: 'Artisanal Flavors Crafted Over Wood Fire & Mediterranean Soul',
+    heroSubheadline: 'Handmade sourdough pastas, charred wild sea harvest, and curated Tuscan vintages crafted over open embers.',
+    accentColor: '#f59e0b',
     chatPreset: {
-      greeting: 'Welcome to The Urban Bistro! I can assist you with our menu, tonight\'s table reservations, or private dining.',
+      greeting: 'Welcome to The Urban Bistro & Bar! I am your on-site sommelier and reservation concierge. Can I assist you with tonight\'s table availability, private dining, or wine pairings?',
       suggestions: [
-        'What services do you offer?',
-        'I want to place an order.',
-        'What are your opening hours?',
-        'Can I book a table for 4 tonight?'
+        'Reserve a table for tonight',
+        'Show me signature dishes',
+        'What wine pairings do you recommend?',
+        'Opening hours & location'
       ],
       qaPairs: [
         {
-          question: 'What services do you offer?',
-          answer: 'We offer dine-in reservations, takeaway pickup orders, catering for private celebrations, and weekly chef tasting menus.'
+          question: 'Reserve a table for tonight',
+          answer: 'We have open tables tonight at 7:15 PM and 8:45 PM for up to 6 guests. Would you like me to hold the 7:15 PM slot under your name, or connect you with our host on WhatsApp?'
         },
         {
-          question: 'I want to place an order.',
-          answer: 'Sure! What would you like to order? You can choose from our wood-fired pizzas, fresh pasta, or chef specials. I can take your order right now or connect you to our kitchen via WhatsApp.'
+          question: 'Show me signature dishes',
+          answer: 'Our top wood-fired favorites tonight are: 1) Truffle & Porcini Tagliolini ($28), 2) Charred Mediterranean Branzino ($36), and 3) Smoked Burrata with Fig & Wood-Fired Sourdough ($19).'
         },
         {
-          question: 'What are your opening hours?',
-          answer: 'We are open Tuesday through Sunday from 11:30 AM to 10:30 PM. We are closed on Mondays for kitchen prep.'
+          question: 'What wine pairings do you recommend?',
+          answer: 'For red meat or our truffle tagliolini, our sommelier highlights our 2019 Brunello di Montalcino. For the wood-fired Branzino, our chilled Vermentino di Sardegna pairs exquisitely!'
         },
         {
-          question: 'Can I book a table for 4 tonight?',
-          answer: 'Yes! We have tables available at 7:00 PM and 8:30 PM tonight. Would you like me to reserve the 7:00 PM slot under your name?'
+          question: 'Opening hours & location',
+          answer: 'We are open Tuesday through Sunday from 5:00 PM to 11:30 PM at 142 Mercer Street, Soho. Complimentary valet parking is available upon arrival.'
         }
       ]
     }
@@ -289,35 +289,35 @@ export const DEMO_INDUSTRIES: DemoIndustry[] = [
   {
     id: 'hotel',
     name: 'Hotel & Suites',
-    businessName: 'Azure Grand Hotel',
-    category: 'Hospitality',
-    heroHeadline: 'Refined Coastal Suites & Executive Comfort',
-    heroSubheadline: 'Experience understated luxury with ocean view terraces, executive suites, and concierge hospitality.',
-    accentColor: '#2563eb',
+    businessName: 'Azure Grand Hotel & Coastal Villas',
+    category: 'Oceanfront Luxury Suites & Villas',
+    heroHeadline: 'Understated Coastal Luxury & Unrivaled Monaco Shorelines',
+    heroSubheadline: 'Private heated infinity plunge pools, floor-to-ceiling panoramic glass, and 24/7 dedicated butler service.',
+    accentColor: '#06b6d4',
     chatPreset: {
-      greeting: 'Hello from Azure Grand Concierge. How may I assist your stay or reservation today?',
+      greeting: 'Welcome to Azure Grand Concierge. I can assist you with live suite availability, private chauffeur bookings, or personal dining requests.',
       suggestions: [
-        'What room types are available?',
-        'What are check-in times?',
-        'Do you offer airport transfer?',
-        'How do I book a stay?'
+        'Check suite rates & availability',
+        'Private beach & pool amenities',
+        'Do you provide airport chauffeur?',
+        'Best direct-booking rates'
       ],
       qaPairs: [
         {
-          question: 'What room types are available?',
-          answer: 'We offer Deluxe King Suites, Panoramic Oceanfront Rooms, and 2-Bedroom Executive Penthouse apartments.'
+          question: 'Check suite rates & availability',
+          answer: 'We have 3 signature suites open this weekend: the Azure Horizon Suite ($420/night), the Presidential Penthouse ($890/night), and our Secluded Beach Villa ($1,250/night). Would you like to reserve one?'
         },
         {
-          question: 'What are check-in times?',
-          answer: 'Check-in begins at 2:00 PM and check-out is at 11:00 AM. Early check-in or late check-out is complimentary upon request subject to availability.'
+          question: 'Private beach & pool amenities',
+          answer: 'Our guests enjoy private cabanas on Monaco Bay, heated sea-water infinity pools, complimentary Nespresso and mini-bar, and our full-service Thalasso Spa.'
         },
         {
-          question: 'Do you offer airport transfer?',
-          answer: 'Yes, we provide private executive airport pickup and drop-off 24/7. Simply share your flight details and our driver will meet you at arrivals.'
+          question: 'Do you provide airport chauffeur?',
+          answer: 'Yes, our Mercedes Maybach chauffeur service provides complimentary pickup and drop-off from Nice/Monaco airport directly to your suite door.'
         },
         {
-          question: 'How do I book a stay?',
-          answer: 'You can select your arrival dates and preferred suite here, and I will prepare a direct booking confirmation with our best direct-rate guarantee.'
+          question: 'Best direct-booking rates',
+          answer: 'Booking directly through our on-site concierge guarantees our lowest price, plus complimentary 1:00 PM late checkout and daily champagne breakfast.'
         }
       ]
     }
@@ -325,35 +325,35 @@ export const DEMO_INDUSTRIES: DemoIndustry[] = [
   {
     id: 'salon',
     name: 'Salon & Spa',
-    businessName: 'Velvet Hair & Beauty Studio',
-    category: 'Personal Care',
-    heroHeadline: 'Premium Hair Styling, Color Bar & Spa Care',
-    heroSubheadline: 'Personalized master styling, organic treatments, and bridal beauty services.',
-    accentColor: '#60a5fa',
+    businessName: 'Velvet Hair & Beauty Atelier',
+    category: 'Color Lab • Master Balayage • Spa',
+    heroHeadline: 'Bespoke Hair Artistry, Luminous Color, & Scalp Rituals',
+    heroSubheadline: 'Master French balayage, formaldehyde-free organic silk smoothing, and editorial bridal styling in Soho NYC.',
+    accentColor: '#f43f5e',
     chatPreset: {
-      greeting: 'Hi there! Velvet Studio assistant here. I can answer questions about our treatments, pricing, or book your next styling session.',
+      greeting: 'Bonjour! Welcome to Velvet Atelier. I can assist you with treatment pricing, stylist schedules, or booking your next session.',
       suggestions: [
-        'What services do you offer?',
-        'What is the price for hair coloring?',
-        'How do I book an appointment?',
-        'Are walk-ins accepted?'
+        'Balayage pricing & consultation',
+        'Book an appointment this week',
+        'Formaldehyde-free keratin smoothing',
+        'Walk-in policy & location'
       ],
       qaPairs: [
         {
-          question: 'What services do you offer?',
-          answer: 'We specialize in precision haircuts, custom balayage and coloring, keratin smoothing treatments, and full bridal/event styling packages.'
+          question: 'Balayage pricing & consultation',
+          answer: 'Our Custom French Balayage starts at $140, which includes personalized shade mapping, bond-building Olaplex protection, custom gloss toner, and a signature blowout.'
         },
         {
-          question: 'What is the price for hair coloring?',
-          answer: 'Full color starts at $65, and signature custom balayage starts at $120 including consultation, toner, and blowout finish.'
+          question: 'Book an appointment this week',
+          answer: 'We have openings with Master Colorist Chloe on Thursday at 2:00 PM and Saturday at 11:30 AM. Would you like me to hold one of these slots under your name?'
         },
         {
-          question: 'How do I book an appointment?',
-          answer: 'You can book your appointment right here or send us a quick WhatsApp message. What day and time works best for you?'
+          question: 'Formaldehyde-free keratin smoothing',
+          answer: 'Our Silk Keratin Infusion ($160) is 100% formaldehyde-free and plant-derived, eliminating frizz and imparting glass-like shine for up to 4 months.'
         },
         {
-          question: 'Are walk-ins accepted?',
-          answer: 'We warmly welcome walk-ins whenever a stylist is free, though we recommend reserving your spot to ensure zero wait time.'
+          question: 'Walk-in policy & location',
+          answer: 'We are located at 88 Prince Street in Soho. We accommodate walk-ins when styling chairs permit, but reserving online ensures zero wait time.'
         }
       ]
     }
@@ -361,35 +361,35 @@ export const DEMO_INDUSTRIES: DemoIndustry[] = [
   {
     id: 'realestate',
     name: 'Real Estate Agency',
-    businessName: 'Summit Prime Properties',
-    category: 'Property & Real Estate',
-    heroHeadline: 'Commercial & Residential Property Advisors',
-    heroSubheadline: 'Helping individuals, investors, and businesses buy, sell, and lease verified properties with confidence.',
-    accentColor: '#3b82f6',
+    businessName: 'Summit Prime Properties & Advisory',
+    category: 'Prime Penthouses • Waterfront Estates',
+    heroHeadline: 'Curated Architectural Residences & Commercial Hubs',
+    heroSubheadline: 'Verified legal title deeds, private acquisition brokerage, and virtual 3D property tours for high-net-worth investors.',
+    accentColor: '#10b981',
     chatPreset: {
-      greeting: 'Welcome to Summit Prime Properties. Looking to purchase, lease, or list a property?',
+      greeting: 'Welcome to Summit Prime Advisory. Looking to acquire a verified penthouse, villa, or high-yield commercial asset?',
       suggestions: [
-        'What listings are currently available?',
-        'Can I schedule a property viewing?',
-        'Do you assist with commercial rentals?',
-        'How can I speak to an agent?'
+        'Explore verified luxury listings',
+        'Schedule a private property viewing',
+        'Commercial office leases & retail',
+        'Connect with lead broker on WhatsApp'
       ],
       qaPairs: [
         {
-          question: 'What listings are currently available?',
-          answer: 'We have 18 verified listings this week, including modern city apartments, private residential villas, and prime high-street commercial retail units.'
+          question: 'Explore verified luxury listings',
+          answer: 'We have 18 verified listings this week, including The Bel-Air Horizon Villa ($2.45M), Skyline Glass Duplex ($1.28M), and prime Midtown commercial floors.'
         },
         {
-          question: 'Can I schedule a property viewing?',
-          answer: 'Certainly! Tell me which listing code or neighborhood you are interested in, and I will coordinate an in-person or live video tour with our lead broker.'
+          question: 'Schedule a private property viewing',
+          answer: 'I can arrange an accompanied private walkthrough or a high-definition 3D virtual tour with our Senior Broker as soon as tomorrow morning.'
         },
         {
-          question: 'Do you assist with commercial rentals?',
-          answer: 'Yes, we represent commercial offices, retail storefronts, and industrial storage facilities across major business hubs.'
+          question: 'Commercial office leases & retail',
+          answer: 'We represent fully fitted turnkey offices in the Financial District starting at $9,500/month with fiber-optic backbones and boardrooms.'
         },
         {
-          question: 'How can I speak to an agent?',
-          answer: 'I can connect you directly with one of our licensed agents on WhatsApp or have them call you within 15 minutes.'
+          question: 'Connect with lead broker on WhatsApp',
+          answer: 'I will connect you directly with our Principal Partner on WhatsApp at +252 687083529 for confidential portfolio matching.'
         }
       ]
     }

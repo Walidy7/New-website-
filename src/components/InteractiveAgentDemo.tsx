@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 import { DEMO_INDUSTRIES } from '../data/content';
 import { INDUSTRY_THEMES } from '../data/industryThemes';
-import { LogoEmblem } from './Logo';
+import { BusinessWebsiteCanvas } from './BusinessWebsiteCanvas';
 import {
   Send,
   Sparkles,
-  MessageCircle,
   Minimize2,
   RefreshCw,
-  ExternalLink,
   Bot,
   ChevronRight,
   Utensils,
   Building,
   Scissors,
-  Home,
-  Clock,
-  MapPin,
-  ShieldCheck,
-  Star
+  Home
 } from 'lucide-react';
 
 interface ChatMessage {
@@ -156,74 +150,6 @@ export const InteractiveAgentDemo: React.FC = () => {
     }
   };
 
-  // Specific mini-nav links for each business
-  const getNavLinks = () => {
-    switch (selectedIndustryId) {
-      case 'restaurant':
-        return ['Dinner Menu', 'Wine & Cocktails', 'Private Dining'];
-      case 'hotel':
-        return ['Suites & Villas', 'Dining & Lounge', 'Spa & Wellness'];
-      case 'salon':
-        return ['Treatment Menu', 'Color & Balayage', 'Stylist Team'];
-      case 'realestate':
-        return ['Verified Listings', 'Commercial Hubs', 'Neighborhoods'];
-      default:
-        return ['Services', 'Pricing', 'About Us'];
-    }
-  };
-
-  // Specific CTA button label for the business header
-  const getNavCtaLabel = () => {
-    switch (selectedIndustryId) {
-      case 'restaurant':
-        return 'Book Table';
-      case 'hotel':
-        return 'Reserve Suite';
-      case 'salon':
-        return 'Book Stylist';
-      case 'realestate':
-        return 'Schedule Tour';
-      default:
-        return 'Contact Us';
-    }
-  };
-
-  // Industry-tailored feature cards
-  const getFeatureCards = () => {
-    switch (selectedIndustryId) {
-      case 'restaurant':
-        return [
-          { title: 'Artisan Wood-Fired', sub: 'Handmade fresh daily', badge: 'Culinary Craft' },
-          { title: 'Instant WhatsApp Orders', sub: 'Direct kitchen routing', badge: 'Order Sync' },
-          { title: 'Table Reservations', sub: 'Zero hold time confirmation', badge: '24/7 Booking' }
-        ];
-      case 'hotel':
-        return [
-          { title: 'Oceanfront Terrace', sub: 'Panoramic coastal view', badge: '5-Star Living' },
-          { title: 'Private Chauffeur', sub: 'Airport pickup included', badge: 'VIP Concierge' },
-          { title: '24/7 Butler Assist', sub: 'Instant room & spa requests', badge: 'Always Open' }
-        ];
-      case 'salon':
-        return [
-          { title: 'Master Balayage & Gloss', sub: 'Tailored foil & toner finish', badge: 'Color Lab' },
-          { title: 'Botanical Keratin', sub: 'Organic shine therapy', badge: 'Spa Care' },
-          { title: 'Instant Stylist Booking', sub: 'WhatsApp schedule lock', badge: 'Zero Wait' }
-        ];
-      case 'realestate':
-        return [
-          { title: 'Verified Title Deeds', sub: '100% legal ownership check', badge: 'Guaranteed' },
-          { title: 'Virtual 3D Walkthrough', sub: 'Explore from smartphone', badge: 'HD Tour' },
-          { title: 'Direct Broker Connect', sub: 'WhatsApp viewing setup', badge: 'Instant Lead' }
-        ];
-      default:
-        return [
-          { title: 'Fast Response', sub: 'Under 3 seconds reply', badge: 'Instant' },
-          { title: 'WhatsApp Ready', sub: 'Direct message sync', badge: 'Seamless' },
-          { title: 'Always Open', sub: 'Captures 24/7 inquiries', badge: 'Automated' }
-        ];
-    }
-  };
-
   return (
     <section
       id="agent-demo"
@@ -311,98 +237,21 @@ export const InteractiveAgentDemo: React.FC = () => {
             </div>
           </div>
 
-          {/* Browser Screen Content - FULLY STYLED TO THE ACTIVE BUSINESS'S OWN COLOR PALETTE */}
-          <div className={`relative min-h-[540px] sm:min-h-[600px] ${activeTheme.canvasBg} ${activeTheme.canvasText} p-4 sm:p-8 overflow-hidden transition-colors duration-300`}>
-            {/* The Mock Business Website Interior */}
-            <div className="max-w-3xl">
-              {/* Mini Business Nav - Tailored Branding & Colors */}
-              <div className={`flex items-center justify-between pb-5 mb-6 border-b ${activeTheme.navBorder}`}>
-                <div className="flex items-center gap-2.5">
-                  <div className={`w-9 h-9 rounded-xl ${activeTheme.brandLogoBg} ${activeTheme.brandLogoColor} flex items-center justify-center font-bold text-sm shadow-md`}>
-                    {getIndustryIcon()}
-                  </div>
-                  <div>
-                    <span className="text-sm sm:text-base font-extrabold block leading-tight">
-                      {activeTheme.businessName}
-                    </span>
-                    <span className={`text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase ${activeTheme.brandAccentText}`}>
-                      {activeTheme.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="hidden sm:flex items-center gap-4 text-xs font-semibold">
-                  {getNavLinks().map((link, i) => (
-                    <span key={i} className="hover:opacity-80 cursor-pointer opacity-75 transition-opacity">
-                      {link}
-                    </span>
-                  ))}
-                  <button
-                    onClick={() => {
-                      setIsChatOpen(true);
-                      handleSendMessage('What services do you offer?');
-                    }}
-                    className={`px-3.5 py-1.5 rounded-lg ${activeTheme.heroCtaBg} ${activeTheme.heroCtaHover} ${activeTheme.heroCtaText} ${activeTheme.heroCtaShadow} font-bold text-xs transition-all shadow`}
-                  >
-                    {getNavCtaLabel()}
-                  </button>
-                </div>
-              </div>
-
-              {/* Mini Hero Banner of the Business - Custom card, typography & CTA */}
-              <div className={`rounded-2xl ${activeTheme.heroCardBg} p-5 sm:p-7 border ${activeTheme.heroCardBorder} mb-6 max-w-xl shadow-xl`}>
-                <div className="flex items-center gap-2 mb-2.5">
-                  <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full ${activeTheme.brandPillBg} text-[10px] font-bold ${activeTheme.brandPillText} border ${activeTheme.brandPillBorder} uppercase tracking-wider`}>
-                    <Star className="w-3 h-3 fill-current" />
-                    <span>{activeTheme.tagline}</span>
-                  </span>
-                </div>
-
-                <h3 className={`text-xl sm:text-2xl font-black ${activeTheme.heroHeadingColor} mb-2 leading-snug`}>
-                  {activeIndustry.heroHeadline}
-                </h3>
-                <p className={`text-xs sm:text-sm ${activeTheme.heroSubtextColor} leading-relaxed mb-5`}>
-                  {activeIndustry.heroSubheadline}
-                </p>
-
-                <div className="flex flex-wrap items-center gap-3">
-                  <button
-                    onClick={() => {
-                      setIsChatOpen(true);
-                      handleSendMessage('What services do you offer?');
-                    }}
-                    className={`px-4 py-2.5 rounded-xl ${activeTheme.heroCtaBg} ${activeTheme.heroCtaHover} ${activeTheme.heroCtaText} text-xs font-extrabold transition-all flex items-center gap-1.5 ${activeTheme.heroCtaShadow}`}
-                  >
-                    <span>Ask On-Site Assistant</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                  </button>
-                  <span className="text-xs opacity-75 font-medium">Available 24/7 &bull; Instant Answers</span>
-                </div>
-              </div>
-
-              {/* Sample Business Offerings Cards - Industry-tailored content & colors */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
-                {getFeatureCards().map((feat, idx) => (
-                  <div
-                    key={idx}
-                    className={`p-3.5 rounded-xl ${activeTheme.featureCardBg} border ${activeTheme.featureCardBorder} shadow-sm`}
-                  >
-                    <span className={`text-[9px] uppercase font-bold tracking-wider block mb-1 ${activeTheme.featureCardHighlight}`}>
-                      {feat.badge}
-                    </span>
-                    <span className={`text-xs font-bold block leading-snug ${activeTheme.featureCardTitle}`}>
-                      {feat.title}
-                    </span>
-                    <span className={`text-[10px] opacity-75 block mt-0.5 ${activeTheme.featureCardSubtext}`}>
-                      {feat.sub}
-                    </span>
-                  </div>
-                ))}
-              </div>
+          {/* Browser Screen Content - FULLY STYLED BESPOKE BUSINESS WEBSITE */}
+          <div className={`relative min-h-[580px] sm:min-h-[640px] ${activeTheme.canvasBg} ${activeTheme.canvasText} p-4 sm:p-7 overflow-hidden transition-colors duration-300`}>
+            {/* The Dedicated Business Website Canvas */}
+            <div className="max-w-4xl pb-16">
+              <BusinessWebsiteCanvas
+                industryId={selectedIndustryId}
+                onOpenChat={(msg) => {
+                  setIsChatOpen(true);
+                  if (msg) handleSendMessage(msg);
+                }}
+              />
             </div>
 
             {/* FLOATING AGENT CHAT WIDGET - STYLED TO MATCH THIS BUSINESS'S BRANDING */}
-            <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-20 flex flex-col items-end max-w-[calc(100%-1.5rem)] sm:max-w-none">
+            <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-30 flex flex-col items-end max-w-[calc(100%-1.5rem)] sm:max-w-none">
               {/* The Opened Chat Window */}
               {isChatOpen && (
                 <div className={`w-[calc(100vw-3.5rem)] max-w-[340px] sm:w-[350px] h-[390px] sm:h-[460px] rounded-3xl ${activeTheme.chat.headerBg} border ${activeTheme.chat.headerBorder} shadow-2xl flex flex-col overflow-hidden mb-2 sm:mb-3 animate-in fade-in zoom-in-95 duration-200 ring-1 ring-white/10`}>

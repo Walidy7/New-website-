@@ -13,7 +13,15 @@ import {
   TrendingUp,
   ShieldCheck,
   Building,
-  RefreshCw
+  RefreshCw,
+  Flame,
+  Wine,
+  UtensilsCrossed,
+  Star,
+  Clock,
+  MapPin,
+  Calendar,
+  ChevronRight
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
@@ -134,95 +142,223 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Visual Mockup showing Website with Embedded On-Site Agent */}
+          {/* Right Column: Visual Mockup showing Framer-Style Luxury Restaurant Website with Embedded On-Site Agent */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Outer Luminous Electric Halo */}
-              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-br from-blue-600/30 via-sky-500/10 to-indigo-600/20 blur-2xl opacity-75 pointer-events-none" />
+              {/* Outer Luminous Electric/Amber Halo */}
+              <div className="absolute -inset-1.5 rounded-2xl bg-gradient-to-br from-amber-600/30 via-orange-500/15 to-blue-600/20 blur-2xl opacity-80 pointer-events-none" />
 
               {/* Modern Glass Frame of Business Website */}
-              <div className="relative rounded-2xl bg-[#060c1c] border border-blue-900/60 shadow-[0_20px_50px_rgba(0,0,0,0.9)] overflow-hidden backdrop-blur-xl">
+              <div className="relative rounded-2xl bg-[#090705] border border-amber-900/50 shadow-[0_20px_50px_rgba(0,0,0,0.95)] overflow-hidden backdrop-blur-xl">
                 {/* Browser Top Navigation Bar */}
-                <div className="flex items-center justify-between px-4 py-3 bg-[#0a1226] border-b border-blue-950/80 text-xs text-slate-400">
+                <div className="flex items-center justify-between px-4 py-2.5 bg-[#120e0a] border-b border-amber-950/80 text-xs text-amber-200/70">
                   <div className="flex items-center gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                    <div className="ml-2 px-2.5 py-0.5 rounded-md bg-[#040814] border border-blue-950 text-[11px] font-mono text-slate-300 flex items-center gap-1.5">
+                    <div className="ml-2 px-2.5 py-0.5 rounded-md bg-[#070503] border border-amber-950 text-[11px] font-mono text-amber-200/90 flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                      <span className="truncate max-w-[140px] sm:max-w-[180px] text-amber-200">theurbanbistro.com</span>
+                      <span className="truncate max-w-[140px] sm:max-w-[190px]">theurbanbistro.com/menu</span>
                     </div>
                   </div>
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-amber-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                    Bespoke Client Theme
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-[10px] font-bold text-amber-300">
+                    <Sparkles className="w-3 h-3 text-amber-400" />
+                    <span>Framer Design Example</span>
                   </span>
                 </div>
 
-                {/* Simulated Business Website Interior Canvas - Custom Culinary Bistro Theme */}
-                <div className="p-4 sm:p-5 space-y-4 bg-gradient-to-b from-[#18110b] via-[#120d08] to-[#0c0805]">
-                  {/* Website Hero Banner */}
-                  <div className="rounded-xl bg-gradient-to-br from-[#26170d] to-[#180f08] p-4 border border-amber-900/50 relative overflow-hidden shadow-lg">
-                    <div className="flex items-start justify-between gap-3 relative z-10">
+                {/* Simulated Business Website Interior Canvas - Framer Qitchen/Deleito Luxury Editorial Theme */}
+                <div className="p-3.5 sm:p-5 space-y-4 bg-gradient-to-b from-[#140f0a] via-[#0d0906] to-[#070503]">
+                  {/* Luxury Restaurant Header & Monogram */}
+                  <div className="flex items-center justify-between pb-3 border-b border-amber-900/40">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full border border-amber-500/60 bg-gradient-to-br from-amber-600 to-amber-900 flex items-center justify-center text-amber-100 font-serif font-black text-xs shadow-md shrink-0">
+                        UB
+                      </div>
                       <div>
-                        <span className="inline-block text-[10px] font-bold tracking-wider uppercase text-amber-400">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs sm:text-sm font-serif font-black tracking-wider uppercase text-amber-50">
+                            The Urban Bistro &amp; Bar
+                          </span>
+                        </div>
+                        <span className="text-[10px] uppercase tracking-widest text-amber-400/90 font-semibold block">
                           Wood-Fired Kitchen &bull; Mediterranean
                         </span>
-                        <h4 className="text-base sm:text-lg font-black text-[#fffbeb] mt-0.5">
-                          The Urban Bistro &amp; Bar
-                        </h4>
-                        <p className="text-xs text-[#fed7aa] mt-1 leading-relaxed">
-                          Handcrafted artisanal menu, fine wines, and one-tap table reservations.
-                        </p>
-                      </div>
-                      <div className="p-2.5 rounded-xl bg-amber-950/80 border border-amber-700/60 shrink-0 text-amber-400">
-                        <Globe className="w-5 h-5" />
                       </div>
                     </div>
 
-                    {/* Mini visual elements representing business content */}
-                    <div className="mt-3.5 pt-3 border-t border-amber-950 flex items-center gap-2">
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 font-medium border border-amber-800/40">
-                        Dinner Menu
+                    <div className="flex items-center gap-2">
+                      <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-700/50 text-[10px] text-emerald-300 font-semibold">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Tables Open Tonight
                       </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 font-medium border border-amber-800/40">
-                        Table Booking
-                      </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950/80 text-amber-300 font-medium border border-amber-800/40">
-                        Wine Pairing
-                      </span>
+                      <button
+                        type="button"
+                        className="px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold text-[11px] shadow-sm transition-all"
+                      >
+                        Reserve
+                      </button>
                     </div>
                   </div>
 
-                  {/* The Embedded Live Assistant - Themed to the Restaurant */}
-                  <div className="rounded-xl bg-[#1e130c] p-4 border border-amber-800/50 shadow-xl space-y-3 relative">
+                  {/* Framer Editorial Hero Banner */}
+                  <div className="rounded-xl bg-gradient-to-br from-[#1f150d] via-[#160f09] to-[#0e0a06] p-4 border border-amber-800/40 relative overflow-hidden shadow-lg">
+                    {/* Ambient warm embers glow */}
+                    <div className="absolute -top-12 -right-12 w-48 h-48 bg-amber-600/15 rounded-full blur-3xl pointer-events-none" />
+
+                    <div className="relative z-10 space-y-2">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-950/80 text-[10px] font-bold text-amber-300 border border-amber-700/50 uppercase tracking-wider">
+                        <Flame className="w-3 h-3 text-amber-400" />
+                        <span>Artisanal Embers &bull; Est. 2021</span>
+                      </div>
+
+                      <h4 className="text-base sm:text-lg font-serif font-black text-amber-50 tracking-tight leading-snug">
+                        Crafted Over Open Flame, Served With Mediterranean Soul
+                      </h4>
+
+                      <p className="text-xs text-amber-200/80 leading-relaxed max-w-lg">
+                        Handmade sourdough pizzas, fresh tagliolini, and wild sea harvest paired with natural Tuscan vintages.
+                      </p>
+
+                      <div className="pt-2 flex flex-wrap items-center justify-between gap-2">
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-extrabold text-xs shadow-md shadow-amber-900/40 transition-all flex items-center gap-1"
+                          >
+                            <Calendar className="w-3 h-3" />
+                            <span>Book A Table</span>
+                          </button>
+                          <button
+                            type="button"
+                            className="px-3 py-1.5 rounded-lg bg-[#140d07] hover:bg-[#1c130b] text-amber-200 text-xs font-semibold border border-amber-800/40 transition-all flex items-center gap-1"
+                          >
+                            <UtensilsCrossed className="w-3 h-3 text-amber-400" />
+                            <span>Full Menu</span>
+                          </button>
+                        </div>
+
+                        <div className="flex items-center gap-1 text-[10px] text-amber-300 font-semibold bg-amber-950/60 px-2 py-0.5 rounded border border-amber-800/40">
+                          <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
+                          <span>4.9 (480+ Reviews)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Framer-Style Signature Dishes Preview Cards */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-[10px] uppercase font-bold tracking-widest text-amber-400">
+                        Signature Wood-Fired Dishes
+                      </span>
+                      <span className="text-[10px] text-amber-300/70 font-mono">Seasonal Selection</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                      {/* Dish 1 */}
+                      <div className="rounded-xl bg-[#140d08] border border-amber-900/40 p-2.5 flex flex-col justify-between hover:border-amber-700/60 transition-all group">
+                        <div className="relative rounded-lg overflow-hidden mb-2 aspect-[4/3] bg-black/40">
+                          <img
+                            src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=400&q=80"
+                            alt="Truffle Tagliolini"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            referrerPolicy="no-referrer"
+                            loading="lazy"
+                          />
+                          <span className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-black/80 backdrop-blur-sm text-[10px] font-bold text-amber-300">
+                            $28
+                          </span>
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                            Truffle Tagliolini
+                          </h5>
+                          <p className="text-[10px] text-amber-200/70 leading-tight mt-0.5 line-clamp-2">
+                            Handmade ribbons, shaved winter black truffle, aged parmigiano.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Dish 2 */}
+                      <div className="rounded-xl bg-[#140d08] border border-amber-900/40 p-2.5 flex flex-col justify-between hover:border-amber-700/60 transition-all group">
+                        <div className="relative rounded-lg overflow-hidden mb-2 aspect-[4/3] bg-black/40">
+                          <img
+                            src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=400&q=80"
+                            alt="Mediterranean Branzino"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            referrerPolicy="no-referrer"
+                            loading="lazy"
+                          />
+                          <span className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-black/80 backdrop-blur-sm text-[10px] font-bold text-amber-300">
+                            $36
+                          </span>
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                            Charred Branzino
+                          </h5>
+                          <p className="text-[10px] text-amber-200/70 leading-tight mt-0.5 line-clamp-2">
+                            Wild sea bass, charred Amalfi lemon, caper herb salmoriglio.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Dish 3 */}
+                      <div className="rounded-xl bg-[#140d08] border border-amber-900/40 p-2.5 flex flex-col justify-between hover:border-amber-700/60 transition-all group">
+                        <div className="relative rounded-lg overflow-hidden mb-2 aspect-[4/3] bg-black/40">
+                          <img
+                            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+                            alt="Wood-Fired Burrata Pizza"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            referrerPolicy="no-referrer"
+                            loading="lazy"
+                          />
+                          <span className="absolute top-1.5 right-1.5 px-1.5 py-0.5 rounded bg-black/80 backdrop-blur-sm text-[10px] font-bold text-amber-300">
+                            $22
+                          </span>
+                        </div>
+                        <div>
+                          <h5 className="text-xs font-bold text-amber-100 group-hover:text-amber-300 transition-colors">
+                            Wood-Fired Pizza
+                          </h5>
+                          <p className="text-[10px] text-amber-200/70 leading-tight mt-0.5 line-clamp-2">
+                            48-hr fermented sourdough, smoked burrata, San Marzano DOP.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* The Embedded Live Sommelier & Concierge - Framer Glass Integration */}
+                  <div className="rounded-xl bg-[#1b120a] p-3.5 sm:p-4 border border-amber-700/50 shadow-xl space-y-2.5 relative">
                     {/* Header of Embedded Agent */}
                     <div className="flex items-center justify-between pb-2 border-b border-amber-900/40">
                       <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-lg overflow-hidden shrink-0 border border-amber-600/50 bg-amber-950 flex items-center justify-center text-amber-300 font-bold text-xs shadow-sm">
+                        <div className="w-7 h-7 rounded-lg overflow-hidden shrink-0 border border-amber-500/60 bg-amber-950 flex items-center justify-center text-amber-200 font-serif font-black text-xs shadow-sm">
                           UB
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5">
-                            <span className="text-xs font-bold text-[#fffbeb]">Bistro On-Site Concierge</span>
+                            <span className="text-xs font-bold text-amber-50">Bistro Sommelier &amp; Concierge</span>
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                           </div>
                           <span className="text-[10px] text-amber-300/80 block leading-tight">
-                            Integrated Directly into Bistro Website
+                            Instant Table Bookings &amp; Wine Pairings 24/7
                           </span>
                         </div>
                       </div>
                       <span className="text-[10px] px-2 py-0.5 rounded bg-amber-950 text-amber-300 font-mono border border-amber-800/50">
-                        Open 24/7
+                        Live Agent
                       </span>
                     </div>
 
                     {/* Live Conversation Snapshot */}
-                    <div className="space-y-2.5 text-xs">
+                    <div className="space-y-2 text-xs">
                       {/* Customer Question Bubble */}
                       <div className="flex items-end justify-end">
-                        <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-2xl rounded-br-sm px-3.5 py-2 max-w-[85%] shadow-md font-normal leading-relaxed">
-                          Can I see your price list or book a table for tonight?
+                        <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-2xl rounded-br-sm px-3 py-1.5 max-w-[88%] shadow-md font-normal leading-relaxed text-[11px] sm:text-xs">
+                          Do you have a table for 4 tonight, and what wine pairs with the Branzino?
                         </div>
                       </div>
 
@@ -231,42 +367,54 @@ export const Hero: React.FC = () => {
                         <div className="w-6 h-6 rounded-full overflow-hidden shrink-0 mt-0.5 border border-amber-600/40 bg-amber-950 flex items-center justify-center text-amber-300 font-bold text-[10px]">
                           UB
                         </div>
-                        <div className="bg-[#140c07] text-[#fed7aa] border border-amber-900/50 rounded-2xl rounded-tl-sm px-3.5 py-2.5 max-w-[90%] space-y-2 shadow-sm">
+                        <div className="bg-[#120b06] text-amber-100 border border-amber-900/50 rounded-2xl rounded-tl-sm px-3 py-2 max-w-[92%] space-y-2 shadow-sm text-[11px] sm:text-xs">
                           <p className="leading-relaxed">
-                            Welcome! Here is our evening menu. We have open tables tonight at 7:30 PM and 8:45 PM. Would you like me to reserve a spot or connect you directly with our host on WhatsApp?
+                            Good evening! We have prime tables open tonight at <strong>7:15 PM</strong> and <strong>8:45 PM</strong>. For the wood-fired Branzino, our chilled <em>Vermentino di Sardegna</em> pairs exquisitely.
                           </p>
-                          <div className="pt-1 flex flex-wrap gap-1.5">
-                            <span className="text-[10px] px-2 py-1 rounded bg-amber-500/20 text-amber-300 font-medium border border-amber-500/30">
-                              Book 7:30 PM Table
+                          <div className="pt-0.5 flex flex-wrap gap-1.5">
+                            <span className="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-200 font-semibold border border-amber-500/30">
+                              Reserve 7:15 PM Table
                             </span>
-                            <span className="text-[10px] px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 font-medium border border-emerald-500/30 inline-flex items-center gap-1">
+                            <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-semibold border border-emerald-500/30 inline-flex items-center gap-1">
                               <MessageCircle className="w-3 h-3" />
-                              WhatsApp Connect
+                              WhatsApp Host
                             </span>
                           </div>
-                          <div className="pt-0.5 flex items-center gap-1.5 text-[10px] text-amber-400 font-semibold">
-                            <Zap className="w-3 h-3 text-amber-400" />
-                            <span>Instant customer lead capture</span>
+                          <div className="pt-0.5 flex items-center gap-1 text-[10px] text-amber-400 font-medium">
+                            <Zap className="w-3 h-3 text-amber-400 shrink-0" />
+                            <span>Instant customer lead capture &bull; Zero missed reservations</span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Multi-channel Routing Badges */}
+                  {/* Multi-Channel Synchronized Routing Strip */}
                   <div className="grid grid-cols-3 gap-2 pt-1 text-center">
                     <div className="p-2 rounded-lg bg-[#140d08] border border-amber-950">
-                      <span className="block text-[11px] font-bold text-amber-100">Website</span>
-                      <span className="text-[9px] text-amber-400">On-site assistant</span>
+                      <span className="block text-[11px] font-bold text-amber-100">Bistro Website</span>
+                      <span className="text-[9px] text-amber-400">On-site Concierge</span>
                     </div>
                     <div className="p-2 rounded-lg bg-[#140d08] border border-amber-950">
                       <span className="block text-[11px] font-bold text-amber-100">WhatsApp</span>
                       <span className="text-[9px] text-emerald-400">Instant DMs</span>
                     </div>
                     <div className="p-2 rounded-lg bg-[#081024] border border-blue-950">
-                      <span className="block text-[11px] font-bold text-slate-200">Telegram</span>
-                      <span className="text-[9px] text-sky-400">Automated Bot</span>
+                      <span className="block text-[11px] font-bold text-slate-200">Maps &amp; Social</span>
+                      <span className="text-[9px] text-sky-400">1-Tap Booking</span>
                     </div>
+                  </div>
+
+                  {/* Atmosphere & Opening Hours Strip */}
+                  <div className="flex items-center justify-between pt-1 px-1 text-[10px] text-amber-300/70 border-t border-amber-950/80">
+                    <span className="inline-flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-amber-400" />
+                      <span>142 Mercer St, Soho</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="w-3 h-3 text-amber-400" />
+                      <span>Tue – Sun: 5:00 PM – 11:30 PM</span>
+                    </span>
                   </div>
                 </div>
 
@@ -274,13 +422,13 @@ export const Hero: React.FC = () => {
                 <div className="px-4 py-3 bg-[#081022] border-t border-blue-950 flex items-center justify-between text-[11px] text-slate-400">
                   <span className="flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
-                    <span>Tested &amp; Approved Before Launch</span>
+                    <span>Live Preview Guarantee &bull; Test Before Public Launch</span>
                   </span>
                   <a
                     href="#agent-demo"
                     className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1"
                   >
-                    <span>Try live demo</span>
+                    <span>Test Interactive Demo</span>
                     <ArrowRight className="w-3 h-3" />
                   </a>
                 </div>
