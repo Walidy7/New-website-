@@ -20,9 +20,11 @@ export const MultiChannelVisual: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60 overflow-hidden">
-      {/* Subtle radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[170px] pointer-events-none" />
+    <section className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60 overflow-hidden w-full max-w-full">
+      {/* Subtle radial glow rigidly clipped to viewport */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-600/10 rounded-full blur-[170px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

@@ -12,7 +12,7 @@ export const PreviewBeforeLaunch: React.FC = () => {
   const [activeStep, setActiveStep] = useState<number>(3);
 
   return (
-    <section id="preview-guarantee" className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60 overflow-hidden">
+    <section id="preview-guarantee" className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60 overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950/80 border border-blue-800/50 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-3">

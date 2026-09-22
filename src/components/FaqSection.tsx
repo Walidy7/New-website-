@@ -12,10 +12,10 @@ export const FaqSection: React.FC = () => {
   return (
     <section
       id="faq"
-      className="relative py-20 lg:py-28 bg-[#040816] border-t border-blue-950/60 overflow-hidden"
+      className="relative py-20 lg:py-28 bg-[#040816] border-t border-blue-950/60 overflow-hidden w-full max-w-full"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background Lighting rigidly clipped to viewport */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[30%] left-[20%] w-[500px] h-[350px] bg-blue-600/10 rounded-full blur-[160px]" />
       </div>
 

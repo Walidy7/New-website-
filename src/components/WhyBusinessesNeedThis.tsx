@@ -14,10 +14,10 @@ export const WhyBusinessesNeedThis: React.FC = () => {
   return (
     <section
       id="why-businesses-need-this"
-      className="relative py-20 lg:py-28 bg-[#030712] overflow-hidden"
+      className="relative py-20 lg:py-28 bg-[#030712] overflow-hidden w-full max-w-full"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background Lighting rigidly clipped to viewport */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[20%] right-[10%] w-[600px] h-[400px] bg-blue-600/10 rounded-full blur-[170px]" />
       </div>
 

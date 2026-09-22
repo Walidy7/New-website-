@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[94vh] flex items-center justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-[#030712]"
+      className="relative min-h-[94vh] flex items-center justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-[#030712] w-full max-w-full"
     >
       {/* Precision Deep Navy & Electric Blue Ambient Lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">

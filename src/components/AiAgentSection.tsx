@@ -45,9 +45,11 @@ export const AiAgentSection: React.FC = () => {
   ];
 
   return (
-    <section id="business-agent" className="py-20 lg:py-28 relative bg-[#040816] border-t border-blue-950/60 overflow-hidden">
-      {/* Ambient Blue Glow */}
-      <div className="absolute top-1/3 left-0 w-[550px] h-[450px] bg-blue-600/10 rounded-full blur-[170px] pointer-events-none" />
+    <section id="business-agent" className="py-20 lg:py-28 relative bg-[#040816] border-t border-blue-950/60 overflow-hidden w-full max-w-full">
+      {/* Ambient Blue Glow rigidly clipped to viewport */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/3 left-0 w-[550px] h-[450px] bg-blue-600/10 rounded-full blur-[170px]" />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">

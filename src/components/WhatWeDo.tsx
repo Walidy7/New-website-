@@ -28,10 +28,10 @@ export const WhatWeDo: React.FC = () => {
   return (
     <section
       id="what-we-do"
-      className="relative py-20 lg:py-28 bg-[#040816] border-t border-b border-blue-950/60 overflow-hidden"
+      className="relative py-20 lg:py-28 bg-[#040816] border-t border-b border-blue-950/60 overflow-hidden w-full max-w-full"
     >
-      {/* Background Lighting */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background Lighting rigidly clipped to viewport */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[30%] left-[50%] -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 rounded-full blur-[160px]" />
       </div>
 
