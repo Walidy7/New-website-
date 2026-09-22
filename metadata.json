@@ -1,0 +1,6 @@
+{
+  "name": "Upper Agent",
+  "description": "Enterprise digital agency building modern websites and intelligent 24/7 customer communication agents for growing businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

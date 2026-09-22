@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #030712;
+    color: #e2e8f0;
+  }
+  
+  body {
+    background-color: #030712;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Deep Navy Agency Mesh & Subtle Dot Grid */
+.bg-agency-grid {
+  background-color: #030712;
+  background-image: 
+    radial-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(3, 7, 18, 0.95), rgba(6, 11, 24, 0.98));
+  background-size: 32px 32px, 100% 100%;
+}
+
+/* Luminous Electric Blue Accent Text */
+.text-electric-blue {
+  background: linear-gradient(135deg, #ffffff 0%, #93c5fd 40%, #3b82f6 80%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pure Blue Gradient Text */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 50%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Ambient glow subtle animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.4deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 8s ease-in-out infinite;
+}
