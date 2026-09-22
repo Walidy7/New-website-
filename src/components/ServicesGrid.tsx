@@ -25,7 +25,7 @@ export const ServicesGrid: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-20 lg:py-28 relative bg-[#040816] border-t border-blue-950/60">
+    <section id="services" className="py-20 lg:py-28 relative bg-[#040816] border-t border-blue-950/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950/60 border border-blue-800/40 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-3">

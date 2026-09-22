@@ -17,11 +17,11 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-100 selection:bg-blue-600 selection:text-white relative">
+    <div className="min-h-screen bg-[#030712] text-slate-100 selection:bg-blue-600 selection:text-white relative w-full max-w-full overflow-x-hidden">
       {/* Global Navigation */}
       <Navbar />
 
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* 1. Hero Section */}
         <Hero />
 

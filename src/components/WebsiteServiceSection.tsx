@@ -47,7 +47,7 @@ export const WebsiteServiceSection: React.FC = () => {
   ];
 
   return (
-    <section id="websites" className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60">
+    <section id="websites" className="py-20 lg:py-28 relative bg-[#030712] border-t border-blue-950/60 overflow-hidden">
       {/* Subtle ambient lighting */}
       <div className="absolute top-0 right-0 w-[550px] h-[500px] bg-blue-600/10 rounded-full blur-[170px] pointer-events-none" />
 

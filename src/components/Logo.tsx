@@ -358,7 +358,7 @@ export const Logo: React.FC<LogoProps> = ({
             </span>
           </div>
           <span
-            className={`hidden sm:block font-semibold tracking-widest text-blue-400/90 uppercase mt-0.5 sm:mt-1 ${textSizes[size].tagline}`}
+            className={`hidden md:block font-semibold tracking-widest text-blue-400/90 uppercase mt-0.5 sm:mt-1 ${textSizes[size].tagline}`}
           >
             Digital Agency &bull; Websites &amp; Agents
           </span>

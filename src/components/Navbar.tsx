@@ -61,16 +61,16 @@ export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <header
       id="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? 'py-2.5 sm:py-3 bg-[#030712]/95 backdrop-blur-xl border-b border-blue-900/30 shadow-[0_4px_30px_rgba(0,0,0,0.8)]'
-          : 'py-3.5 sm:py-4 bg-[#030712]/80 backdrop-blur-md border-b border-white/5'
+          : 'py-3 sm:py-4 bg-[#030712]/80 backdrop-blur-md border-b border-white/5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3 sm:gap-4">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-3 sm:gap-4 w-full">
           {/* Left Column: Upper Agent Logo */}
-          <div className="flex items-center justify-start min-w-0">
+          <div className="flex items-center justify-start min-w-0 shrink-0">
             <a
               href="#home"
               id="nav-logo"
@@ -78,16 +78,22 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 e.preventDefault();
                 handleLinkClick('#home');
               }}
-              className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg group shrink-0"
+              className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg group"
+              aria-label="Upper Agent Home"
             >
-              <Logo size="md" />
+              <div className="sm:hidden">
+                <Logo size="sm" />
+              </div>
+              <div className="hidden sm:block">
+                <Logo size="md" />
+              </div>
             </a>
           </div>
 
-          {/* Center Column: Desktop Navigation Links (Quick Links) */}
+          {/* Center Column: Desktop Navigation Links (Only on wide screens to prevent overflow) */}
           <nav
             id="desktop-nav-links"
-            className="hidden xl:flex items-center justify-center gap-1 bg-[#090f20]/80 px-3 py-1.5 rounded-full border border-blue-900/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
+            className="hidden 2xl:flex items-center justify-center gap-1 bg-[#090f20]/80 px-3 py-1.5 rounded-full border border-blue-900/40 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] shrink-0"
           >
             {navLinks.slice(0, 7).map((link) => (
               <a
@@ -97,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                   e.preventDefault();
                   handleLinkClick(link.href);
                 }}
-                className="px-2.5 py-1 text-xs xl:text-sm font-medium text-slate-300 hover:text-white hover:bg-blue-600/15 rounded-full transition-all duration-150 whitespace-nowrap"
+                className="px-2.5 py-1 text-xs font-medium text-slate-300 hover:text-white hover:bg-blue-600/15 rounded-full transition-all duration-150 whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -108,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 e.preventDefault();
                 handleLinkClick('#contact');
               }}
-              className="px-2.5 py-1 text-xs xl:text-sm font-medium text-slate-300 hover:text-white hover:bg-blue-600/15 rounded-full transition-all duration-150 whitespace-nowrap"
+              className="px-2.5 py-1 text-xs font-medium text-slate-300 hover:text-white hover:bg-blue-600/15 rounded-full transition-all duration-150 whitespace-nowrap"
             >
               Contact
             </a>
@@ -122,18 +128,18 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 e.preventDefault();
                 handleLinkClick('#contact');
               }}
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-200 active:scale-95 border border-blue-400/30"
+              className="hidden lg:inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all duration-200 active:scale-95 border border-blue-400/30 shrink-0"
             >
               <span>Upgrade Your Business</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
 
-            {/* 3-Dot Menu Button (Accessible on both Mobile & Desktop) */}
+            {/* 3-Dot Menu Button (Symmetrical square on mobile, expanded with label on larger viewports) */}
             <button
               id="nav-menu-btn"
               type="button"
               onClick={() => setMenuOpen(!menuOpen)}
-              className={`inline-flex items-center justify-center gap-1.5 p-2 sm:px-3 sm:py-2 rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 border ${
+              className={`inline-flex items-center justify-center w-10 h-10 sm:w-auto sm:px-3 sm:py-2 rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 border shrink-0 ${
                 menuOpen
                   ? 'bg-blue-600 text-white border-blue-400 shadow-[0_0_15px_rgba(37,99,235,0.5)]'
                   : 'bg-[#0d1629] text-slate-200 hover:text-white hover:bg-[#15223f] border-blue-900/50 hover:border-blue-500/50 shadow-sm'
@@ -145,12 +151,12 @@ export const Navbar: React.FC<NavbarProps> = () => {
               {menuOpen ? (
                 <>
                   <X className="w-5 h-5 text-white" />
-                  <span className="text-xs font-bold hidden sm:inline">Close</span>
+                  <span className="text-xs font-bold hidden sm:inline ml-1.5">Close</span>
                 </>
               ) : (
                 <>
                   <MoreVertical className="w-5 h-5 text-blue-400" />
-                  <span className="text-xs font-semibold text-slate-200 hidden sm:inline">Menu</span>
+                  <span className="text-xs font-semibold text-slate-200 hidden sm:inline ml-1.5">Menu</span>
                 </>
               )}
             </button>
